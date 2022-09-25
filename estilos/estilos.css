@@ -1,0 +1,582 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* Index y formatos generales*/
+
+.header {grid-area: header;}
+.nav {grid-area: nav;}
+.explicacion {grid-area: explicacion;}
+.reglas {grid-area: reglas;}
+.salas {grid-area: salas;}
+.juego {grid-area: juego;}
+.footer {grid-area: footer;}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'header header header header '
+    'nav nav nav nav '
+    'explicacion explicacion explicacion explicacion '
+    'reglas reglas salas salas'
+    'juego juego juego juego'
+    'footer footer footer footer'
+    ;
+    grid-gap: 0px;
+    padding: 0%;
+    background-image: url("/img/fondometal.jpg");
+  }
+
+
+@media (max-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+        'header header header header header'
+        'nav nav nav nav nav'
+        'explicacion explicacion explicacion explicacion explicacion'
+        'reglas reglas reglas salas salas'
+        'juego juego juego juego juego'
+        'footer footer footer footer footer'
+        ;
+        grid-gap: 0px;
+        padding: 0%;
+        background-image: url("/img/fondometal.jpg");
+          }
+       
+
+    
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            display: grid;
+            grid-template-areas: 
+            'header'
+            'nav'
+            'explicacion'
+            'reglas'
+            'salas'
+            'juego'
+            'footer'
+            ;
+            grid-gap: 0px;
+            padding: 0.1%;
+            background-image: url("/img/fondometal.jpg");
+          
+        }
+
+        
+        
+        }
+
+.header {
+    text-align: center;
+    margin: 0;
+    padding: 2%;
+    background:black;
+    color: #D39D0A;
+    font-family: 'Bangers';
+    font-size: 170%;
+    animation-name: cambiarColor;
+    animation-duration: 10s;
+    animation-delay: 0s;
+
+}
+
+@keyframes cambiarColor {
+    from {color:black;}
+    to {color: #D39D0A;}
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 3%;
+    font-family: 'Noto Sans', sans-serif; 
+    text-align: justify;
+
+
+}
+
+.reglas li{
+    position: relative;
+    padding-left: 3%;
+    margin-bottom: 2%;}
+
+
+  
+  .container li:before, .teoria li:before {
+    top: 0;
+    left: 0;
+    font-family: FontAwesome;
+    content: "\f239";
+    color: #D39D0A;
+  }
+
+
+.salas a{
+    color: white;
+}
+
+.salas a:hover {
+    background: white;
+    color: black;
+}
+
+
+nav {
+    text-align: left;
+    background-image: url("/img/barra2.jpg");
+    font-size: 180%;
+    font-family: 'Staatliches', cursive; 
+    padding: 0.5%;
+    }
+
+ nav a {
+     color: #D39D0A;
+     background-color: black;
+     font-size: 110%;
+     border: 0,5% #D39D0A solid;
+     padding:0.3%;
+     margin: 0.5%;
+     border-radius: 5%;
+     text-decoration: none;
+
+      }
+
+      nav a:hover, a.marcado {
+          color: black;
+          background-color: #D39D0A;
+      }
+
+
+
+      .explicacion, .cuento, .situacion, .teoria {
+        margin: 1.5%;
+        color: whitesmoke;
+        font-family: 'Noto Sans', sans-serif; 
+        padding: 3%;
+        font-size: 140%;
+         background-image: url("/img/fondooscuro.jpg");
+        }
+    
+        .explicacion h2, .cuento h2{
+            font-size: 180%;
+                }
+    
+    .reglas{
+        margin: 2.5%;
+        padding: 4%;
+        background: black;
+        font-size: 110%;
+        color: whitesmoke;
+        font-family: 'Noto Sans', sans-serif;
+    }
+    
+    .salas{
+        margin: 2.5%;
+        padding: 4%;
+        background: black;
+        color: whitesmoke;
+        font-size: 110%;
+    
+        font-family: 'Noto Sans', sans-serif;
+    }
+    
+    h2 {
+        text-align:center;
+        padding: 1%;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 150%;
+    }
+
+    h3 {
+        text-align:center;
+        padding: 0%;
+        font-family: 'Noto Sans', sans-serif;
+            font-size: 120%;}
+            
+    
+    .reglas p, .explicacion p, .salas p, .cuento p, .situacion p, .teoria p {
+        text-align: justify;
+        font-family: 'Noto Sans', sans-serif; 
+        margin-top: 2%;
+           
+       
+    }
+    
+    
+    .footer {
+        text-align: right;
+        background: black;
+        color: #D39D0A;
+        padding: 0.5%;
+        padding-right: 1%;
+        font-family: 'Noto Sans', sans-serif; 
+        font-weight: bold;
+        font-size: 95%;
+        }
+
+        .footer i{
+            color: #4267B2
+            ;
+            font-size: 130%;
+        }
+
+    
+    .juego, .volver {
+        text-align: center;
+        margin: 0;
+        padding: 0%;
+        background-image: url("/img/boton.jpg");
+        color: darkkhaki;
+        
+    }
+    
+    .juego a, .volver a{
+        color: #D39D0A;
+        background-color: black;
+        font-family: 'Bangers', cursive; 
+        font-size: 140%;
+        text-decoration: none;
+        border-radius: 3%;
+        border: solid 1% darkkhaki;
+        padding: 1%;
+    }
+    
+    .juego a:hover, .volver a:hover{
+        color: black;
+        background-color: #D39D0A;}
+
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+            }
+        
+        iframe{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        
+/* INICIO JUEGO */
+
+.foto{grid-area: foto;}
+.situacion{grid-area: situacion;}
+
+.containerjuego{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'nav nav'
+    'situacion foto'
+    'juego juego'
+    'footer footer'
+    ;
+    grid-gap: 0%;
+    padding: 0.1%;
+    background-image: url("/img/fondooscuro.jpg");
+}
+
+@media (max-width: 800px) {
+    .containerjuego{
+        display: grid;
+        grid-template-areas: 
+        'header header'
+        'nav nav'
+        'foto foto'
+        'situacion situacion'
+        'juego juego'
+        'footer footer'
+        ;
+        grid-gap: 0%;
+        padding: 0.1%;
+        background-image: url("/img/fondooscuro.jpg");
+    }
+          
+    }
+
+    
+.foto, .situacion {
+    background-image: url("/img/fondooscuro.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.situacion {
+    margin: 2%;
+    padding: 2%;
+    font-size: 120%;
+    color: whitesmoke;
+    font-family: 'Noto Sans', sans-serif; 
+    }
+
+.foto {
+    margin: 4%;
+    padding: 2%;
+    text-align: center;
+}
+
+/* ESTACIONES */
+
+
+.estacion {grid-area: estacion;}
+.codigo {grid-area: codigo;}
+.pista {grid-area: pista;}
+.respuesta {grid-area: respuesta;}
+
+.estaciones{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'nav nav'
+    'estacion estacion'
+    'codigo codigo'
+    'pista pista'
+    'respuesta respuesta'
+    'juego juego'
+    'footer footer'
+    ;
+   
+    background-image: url("/img/fondometal.jpg");
+}
+
+.final{
+       background-image: url("/img/fondometal.jpg");
+}
+    
+        .estacion, .pista {
+    padding:2%;
+        }
+    
+        .codigo {
+            margin: 1%;
+            padding:1%;
+            font-size: 180%;
+            color: white;
+            font-family: 'Noto Sans', sans-serif;  
+            font-weight: bold;  
+            text-align: center;
+        }
+    
+        .respuesta{
+            margin: 1%;
+            padding:1%;
+            font-size: 200%;
+            color: white;
+            font-family: 'Noto Sans', sans-serif;  
+            font-weight: bold;  
+            text-align: center;
+        }
+    
+        input{
+            padding:0.2%;
+            font-size: 80%;
+            font-family: 'Noto Sans', sans-serif;  
+            font-weight: bold;  
+            text-align: center;
+            border: solid 5px #D39D0A; 
+        }
+        
+        img.est {
+            margin-top: 2%;
+            max-width: 70%;
+            animation-name: achicar;
+            animation-duration: 3s;
+            animation-delay: 0s;
+        
+        }
+    
+        @keyframes achicar {
+            from {max-width: 190%;}
+            to {max-width: 70%;}
+        }
+
+        button{
+            color: #D39D0A;
+            background-color: black;
+            font-family: 'Bangers', cursive; 
+            font-size: 240%;
+            border-radius: 3%;
+            border: solid 1% darkkhaki;
+            padding: 1%;
+        }
+        
+        
+        button:hover {
+            color: black;
+            background-color: #D39D0A;
+        }
+        
+        .pista img {
+            width: 60%;
+        }
+
+        @media (max-width: 600px) {
+
+            .respuesta{
+              
+                font-size: 150%;
+                   }
+        
+            input{
+                font-size: 60%;
+               
+            }
+            .codigo {
+               
+                font-size: 130%;
+               
+            }
+        
+            }
+    
+/* CUENTO */
+
+.cuento {grid-area: cuento;}
+.volver {grid-area: volver;}
+
+.containercuento{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'nav nav'
+    'cuento cuento'
+    'volver volver'
+    'footer footer'
+    ;
+    grid-gap: 0%;
+    padding: 0.1%;
+    background-image: url("/img/fondooscuro.jpg");
+}
+
+
+
+p.epigrafe {
+    text-align:right;
+    font-size: 80%;
+}
+
+
+/* TEORIA */
+
+.menuv {grid-area: menuv;}
+.teoria {grid-area: teoria;}
+
+.containerteoria {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'nav nav nav'
+    'teoria teoria menuv'
+    'volver volver volver'
+    'footer footer footer'
+    ;
+    grid-gap: 0%;
+    padding: 0.1%;
+    background-image: url("/img/fondooscuro.jpg");
+} 
+
+
+
+
+.menuv{
+    background-image: url("/img/fondometal.jpg");
+    padding-top: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 15vw;
+
+    }
+
+.menuv p{
+    padding: 1%;
+    margin-top:5%;
+ }
+
+
+.menuv a{
+    padding: 3%;
+    border: solid #D39D0A 1%;
+    font-size:100% ;
+    }
+.teoria iframe{
+    height: 22vw;
+    width: 40vw;
+
+}
+.teoria{
+    margin: 1%;
+}
+
+@media (max-width: 920px) {
+    .containerteoria {
+        display: grid;
+        grid-template-areas: 
+        'header'
+        'nav'
+        'menuv'
+        'teoria'
+        'volver'
+        'footer'
+        ;
+        grid-gap: 0%;
+        padding: 0%;
+        background-image: url("/img/fondooscuro.jpg");
+            }
+        
+            .menuv{
+                width: 99vw;
+                background-image: url("/img/fondometal.jpg");
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                padding-top: 0%;
+                padding-left: 0%;
+
+            
+                }
+            
+                .menuv a{
+                    display: inline;
+                    padding: 1%;
+                    margin: top 1px;%;
+                 }
+        }
+
+        
+@media (max-width: 600px) {
+
+    p.epigrafe {
+        font-size: 60%;
+    }
+
+    .explicacion, .cuento, .situacion, .teoria {
+        
+        font-size: 120%;
+        }
+
+        .footer {
+       
+            font-size: 75%;
+            }
+    
+            .footer i{
+                color: #4267B2
+                ;
+                font-size: 100%;
+            }
+
+    }
